@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .mesh-bg {
+    background: linear-gradient(135deg, #E0F2FE 0%, #FCE7F3 35%, #F3E8FF 70%, #FEF9C3 100%);
+    background-size: 200% 200%;
+    animation: meshMovement 20s ease infinite;
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 40px -10px rgba(31, 38, 135, 0.08);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px -5px rgba(31, 38, 135, 0.04);
+  }
+
+  .glass-input {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-input:focus {
+    background: rgba(255, 255, 255, 0.82);
+    border-color: #4FC3F7;
+    outline: none;
+  }
+}
+
+@keyframes meshMovement {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatPaw {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+}
+
+.animate-float-paw {
+  animation: floatPaw 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar styling for a polished UI */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(186, 104, 200, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(186, 104, 200, 0.6);
+}

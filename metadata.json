@@ -1,0 +1,6 @@
+{
+  "name": "Pet Paradise",
+  "description": "A premium, colorful e-commerce website for top-tier pet food, stylish accessories, and salon-grade pet grooming with an integrated AI caregiver assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
